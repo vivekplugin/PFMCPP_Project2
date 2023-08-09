@@ -102,43 +102,81 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int addThreeToNumber(int numberToAdd)
+{
+    ignoreUnused(numberToAdd);
+    return {};
+}
 /*
  2)
  */
-
+void printNum(int numToPrint)
+{
+    ignoreUnused(numToPrint);
+}
 /*
  3)
  */
-
+int addNumbers(int num1, int num2 = 5)
+{
+    ignoreUnused(num1, num2);
+    return{};
+}
 /*
  4)
  */
-
+float findSquareRoot(int number1)
+{
+    ignoreUnused(number1);
+    return{};
+}
 /*
  5)
  */
-
+bool bookAVacation(int numOfWeeks, int destination = 0)
+{
+    ignoreUnused(numOfWeeks, destination);
+    return{};
+}
 /*
  6)
  */
-
+int calculateDaysLeft(int startDate, int endDate)
+{
+    ignoreUnused(startDate, endDate);
+    return{};
+}
 /*
  7)
  */
-
+bool addToRecord(int studentNumber, char grade)
+{
+    ignoreUnused(studentNumber, grade);
+    return{};
+}
 /*
  8)
  */
-
+void printNextTenNum(int numToPrintFrom)
+{
+    ignoreUnused(numToPrintFrom);
+}
 /*
  9)
  */
-
+bool storePhoneNum(int phoneNum, int countryCode)
+{
+    ignoreUnused(phoneNum, countryCode);
+    return{};
+}
 /*
  10)
  */
-
+bool deleteTask(int taskId)
+{
+    ignoreUnused(taskId);
+    return{};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -159,27 +197,28 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto numAdded = addThreeToNumber(16);
     //2)
-    
+    printNum(999);
     //3)
-    
+    auto sumOfNumbers = addNumbers(6,7);
     //4)
-    
+    auto squareRoot = findSquareRoot(4);
     //5)
-    
+    auto vacationBooked = bookAVacation(2, 1);
     //6)
-    
+    auto daysLeft = calculateDaysLeft(25, 30);
     //7)
-    
+    auto recordAdded = addToRecord(999, 'A');
     //8)
-    
+    printNextTenNum(10);
     //9)
-    
+    auto numStored = storePhoneNum(99999, 91);
     //10)
-    
+    auto taskDeleted = deleteTask(999);
     
     ignoreUnused(carRented);
+    ignoreUnused(numAdded, sumOfNumbers, squareRoot, vacationBooked, daysLeft, recordAdded, numStored, taskDeleted);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
