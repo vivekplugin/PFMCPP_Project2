@@ -202,7 +202,7 @@ int main()
     //2)
     printChar('B');
     //3)
-    auto sumOfNumbers = addNumbers(6.4, 7.6);
+    auto sumOfNumbers = addNumbers(6.4f, 7.6f);
     //4)
     auto squareRoot = findSquareRoot(4);
     //5)
