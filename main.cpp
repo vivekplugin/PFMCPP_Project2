@@ -84,8 +84,7 @@ void variableDeclarations()
     unsigned int noOfSongs = 52416;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
-    ignoreUnused(noOfDays, age, year, minute, temperature, miles, isOpen, isClosed, isWinter, height, weight, num, grade, initial, yes, price, speed, noOfSongs);
+    ignoreUnused(number, noOfDays, age, year, minute, temperature, miles, isOpen, isClosed, isWinter, height, weight, num, grade, initial, yes, price, speed, noOfSongs); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -218,8 +217,7 @@ int main()
     //10)
     auto taskDeleted = deleteTask(999);
     
-    ignoreUnused(carRented);
-    ignoreUnused(numAdded, sumOfNumbers, squareRoot, vacationBooked, daysLeft, recordAdded, numStored, taskDeleted);
+    ignoreUnused(carRented, numAdded, sumOfNumbers, squareRoot, vacationBooked, daysLeft, recordAdded, numStored, taskDeleted);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
