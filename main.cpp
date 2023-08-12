@@ -16,7 +16,7 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
+ int, bool, float, double, char, unsingned int.
  
  
  
@@ -64,10 +64,27 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    int noOfDays = 7;
+    int age = 33;
+    int year = 1989;
+    float minute = 10.0f;
+    float temperature = 32.5f;
+    float miles = 5.6f;
+    bool isOpen = true;
+    bool isClosed = false;
+    bool isWinter = false;
+    double height = 5.10;
+    double weight = 70.2;
+    double num = 3.5;
+    char grade = 'A';
+    char initial = 'P';
+    char yes = 'Y';
+    unsigned int price = 67889;
+    unsigned int speed = 124;
+    unsigned int noOfSongs = 52416;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, noOfDays, age, year, minute, temperature, miles, isOpen, isClosed, isWinter, height, weight, num, grade, initial, yes, price, speed, noOfSongs); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -84,42 +101,81 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int addThreeToNumber(int numberToAdd)
+{
+    ignoreUnused(numberToAdd);
+    return {};
+}
 /*
  2)
  */
-
+void printChar(char charToPrint = 'B')
+{
+    ignoreUnused(charToPrint);
+}
 /*
  3)
  */
-
+float addNumbers(float num1 = 4.3f, float num2 = 5.2f)
+{
+    ignoreUnused(num1, num2);
+    return{};
+}
 /*
  4)
  */
-
+float findSquareRoot(int number1)
+{
+    ignoreUnused(number1);
+    return{};
+}
 /*
  5)
  */
-
+bool bookAVacation(int numOfWeeks, char destination = 'A')
+{
+    ignoreUnused(numOfWeeks, destination);
+    return{};
+}
 /*
  6)
  */
-
+int calculateDaysLeft(int startDate, int endDate)
+{
+    ignoreUnused(startDate, endDate);
+    return{};
+}
 /*
  7)
  */
-
+bool addToRecord(int studentNumber, char grade)
+{
+    ignoreUnused(studentNumber, grade);
+    return{};
+}
 /*
  8)
  */
-
+void printNextTenNum(int numToPrintFrom)
+{
+    ignoreUnused(numToPrintFrom);
+}
 /*
  9)
  */
-
+bool storePhoneNum(int phoneNum, int countryCode, bool isActive = true)
+{
+    ignoreUnused(phoneNum, countryCode, isActive);
+    return{};
+}
 /*
  10)
  */
+bool deleteTask(int taskId)
+{
+    ignoreUnused(taskId);
+    return{};
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -141,27 +197,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto numAdded = addThreeToNumber(16);
     //2)
-    
+    printChar('B');
     //3)
-    
+    auto sumOfNumbers = addNumbers(6.4f, 7.6f);
     //4)
-    
+    auto squareRoot = findSquareRoot(4);
     //5)
-    
+    auto vacationBooked = bookAVacation(2, 'B');
     //6)
-    
+    auto daysLeft = calculateDaysLeft(25, 30);
     //7)
-    
+    auto recordAdded = addToRecord(999, 'A');
     //8)
-    
+    printNextTenNum(10);
     //9)
-    
+    auto numStored = storePhoneNum(99999, 91, true);
     //10)
+    auto taskDeleted = deleteTask(999);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, numAdded, sumOfNumbers, squareRoot, vacationBooked, daysLeft, recordAdded, numStored, taskDeleted);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
