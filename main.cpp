@@ -110,14 +110,14 @@ int addThreeToNumber(int numberToAdd)
 /*
  2)
  */
-void printNum(int numToPrint)
+void printChar(char charToPrint = 'B')
 {
-    ignoreUnused(numToPrint);
+    ignoreUnused(charToPrint);
 }
 /*
  3)
  */
-int addNumbers(int num1, int num2 = 5)
+float addNumbers(float num1 = 4.3f, float num2 = 5.2f)
 {
     ignoreUnused(num1, num2);
     return{};
@@ -133,7 +133,7 @@ float findSquareRoot(int number1)
 /*
  5)
  */
-bool bookAVacation(int numOfWeeks, int destination = 0)
+bool bookAVacation(int numOfWeeks, char destination = 'A')
 {
     ignoreUnused(numOfWeeks, destination);
     return{};
@@ -164,9 +164,9 @@ void printNextTenNum(int numToPrintFrom)
 /*
  9)
  */
-bool storePhoneNum(int phoneNum, int countryCode)
+bool storePhoneNum(int phoneNum, int countryCode, bool isActive = true)
 {
-    ignoreUnused(phoneNum, countryCode);
+    ignoreUnused(phoneNum, countryCode, isActive);
     return{};
 }
 /*
@@ -177,6 +177,7 @@ bool deleteTask(int taskId)
     ignoreUnused(taskId);
     return{};
 }
+
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -199,13 +200,13 @@ int main()
     //1)
     auto numAdded = addThreeToNumber(16);
     //2)
-    printNum(999);
+    printChar('B');
     //3)
-    auto sumOfNumbers = addNumbers(6,7);
+    auto sumOfNumbers = addNumbers(6.4, 7.6);
     //4)
     auto squareRoot = findSquareRoot(4);
     //5)
-    auto vacationBooked = bookAVacation(2, 1);
+    auto vacationBooked = bookAVacation(2, 'B');
     //6)
     auto daysLeft = calculateDaysLeft(25, 30);
     //7)
@@ -213,7 +214,7 @@ int main()
     //8)
     printNextTenNum(10);
     //9)
-    auto numStored = storePhoneNum(99999, 91);
+    auto numStored = storePhoneNum(99999, 91, true);
     //10)
     auto taskDeleted = deleteTask(999);
     
